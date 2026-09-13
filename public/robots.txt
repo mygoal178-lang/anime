@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /watchlist
+Disallow: /history
+Disallow: /api/
+
+Sitemap: https://www.anivault.online/sitemap.xml

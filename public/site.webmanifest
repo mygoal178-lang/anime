@@ -1,0 +1,21 @@
+{
+  "name": "AniVault",
+  "short_name": "AniVault",
+  "description": "Watch anime online free in HD",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#e11d48",
+  "background_color": "#07070c",
+  "display": "standalone",
+  "start_url": "/"
+}

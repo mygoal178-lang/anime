@@ -1,0 +1,82 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "functions": {
+    "api/index.ts": {
+      "maxDuration": 30,
+      "memory": 1024
+    },
+    "api/sitemap.ts": {
+      "maxDuration": 30,
+      "memory": 1024
+    },
+    "api/anilist/search.ts": {
+      "maxDuration": 10,
+      "memory": 1024
+    },
+    "api/anilist/top.ts": {
+      "maxDuration": 10,
+      "memory": 1024
+    },
+    "api/anilist/season-now.ts": {
+      "maxDuration": 10,
+      "memory": 1024
+    },
+    "api/anilist/genres.ts": {
+      "maxDuration": 10,
+      "memory": 1024
+    },
+    "api/anilist/anime/[malId]/index.ts": {
+      "maxDuration": 10,
+      "memory": 1024
+    },
+    "api/anilist/anime/[malId]/characters.ts": {
+      "maxDuration": 10,
+      "memory": 1024
+    },
+    "api/db/health.ts": {
+      "maxDuration": 10,
+      "memory": 512
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/sitemap"
+    },
+    {
+      "source": "/api/db/health",
+      "destination": "/api/db/health"
+    },
+    {
+      "source": "/api/health",
+      "destination": "/api"
+    },
+    {
+      "source": "/api/anime",
+      "destination": "/api"
+    },
+    {
+      "source": "/api/anime/(.*)",
+      "destination": "/api"
+    },
+    {
+      "source": "/api/episodes/(.*)",
+      "destination": "/api"
+    },
+    {
+      "source": "/api/admin/(.*)",
+      "destination": "/api"
+    },
+    {
+      "source": "/api/jikan/(.*)",
+      "destination": "/api"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

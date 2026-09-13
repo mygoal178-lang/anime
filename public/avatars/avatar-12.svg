@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Aura -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#134e4a" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Hair Shading Gradient -->
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="35%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#050508"/>
+    </linearGradient>
+
+    <!-- Skin Shading Gradient -->
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fed7aa"/>
+    </linearGradient>
+
+    <!-- Clothing Gradient -->
+    <linearGradient id="clothGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="40%" stop-color="#115e59"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+
+    <!-- Eye Iris Gradient -->
+    <radialGradient id="eyeGrad" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#2dd4bf"/>
+      <stop offset="85%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#050508"/>
+    </radialGradient>
+
+    <!-- Glow Filter -->
+    <filter id="auraGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Circular Base Mask -->
+  <clipPath id="circleClip">
+    <circle cx="100" cy="100" r="96"/>
+  </clipPath>
+
+  <g clip-path="url(#circleClip)">
+    <!-- 1. Background -->
+    <rect width="200" height="200" fill="url(#bgGrad)"/>
+
+    <!-- Subtle Aura Ring -->
+    <circle cx="100" cy="90" r="75" fill="none" stroke="#2dd4bf" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="6 4"/>
+    <circle cx="100" cy="90" r="82" fill="none" stroke="#14b8a6" stroke-width="0.75" stroke-opacity="0.2"/>
+
+    <!-- Specific Back Accessories (Wings / Fox Ears / Halo) -->
+    
+
+    
+
+    
+
+    <!-- 2. Back Hair -->
+    <path d="M 50,75 C 30,100 25,140 40,165 C 55,145 60,115 65,85 Z" fill="#0d9488" opacity="0.9"/>
+    <path d="M 150,75 C 170,100 175,140 160,165 C 145,145 140,115 135,85 Z" fill="#0d9488" opacity="0.9"/>
+    
+
+    <!-- 3. Shoulders & Body Clothing -->
+    <path d="M 30,200 C 30,160 55,145 100,145 C 145,145 170,160 170,200 Z" fill="url(#clothGrad)"/>
+    
+    <!-- Collar & Chest Armor/Robe -->
+    <path d="M 75,145 L 100,180 L 125,145 Z" fill="#18181b"/>
+    <path d="M 82,145 L 100,172 L 118,145 Z" fill="#2dd4bf" opacity="0.3"/>
+    <line x1="100" y1="145" x2="100" y2="200" stroke="#2dd4bf" stroke-width="2" stroke-dasharray="4 2"/>
+
+    <!-- Neck -->
+    <path d="M 86,115 L 86,145 C 92,150 108,150 114,145 L 114,115 Z" fill="#fed7aa"/>
+
+    <!-- 4. Face & Head -->
+    <!-- Head / Chin Base -->
+    <path d="M 60,82 C 60,122 80,140 100,140 C 120,140 140,122 140,82 C 140,55 122,46 100,46 C 78,46 60,55 60,82 Z" fill="url(#skinGrad)"/>
+
+    <!-- Elf Ears / Normal Ears -->
+    
+      <!-- Standard Anime Ears -->
+      <path d="M 58,80 C 52,80 50,92 60,95 Z" fill="#fed7aa"/>
+      <path d="M 142,80 C 148,80 150,92 140,95 Z" fill="#fed7aa"/>
+    
+
+    <!-- 5. Eyes & Expression -->
+    <!-- Eyebrows -->
+    <path d="M 68,76 Q 80,72 88,76" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M 132,76 Q 120,72 112,76" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Left Eye -->
+    <ellipse cx="78" cy="88" rx="9" ry="11" fill="#09090b"/>
+    <ellipse cx="78" cy="88" rx="8" ry="10" fill="url(#eyeGrad)"/>
+    <ellipse cx="78" cy="88" rx="4" ry="5" fill="#050508"/>
+    <!-- Eye Highlights -->
+    <circle cx="76" cy="84" r="3" fill="#ffffff"/>
+    <circle cx="81" cy="91" r="1.5" fill="#ffffff" opacity="0.8"/>
+
+    <!-- Right Eye -->
+    <ellipse cx="122" cy="88" rx="9" ry="11" fill="#09090b"/>
+    <ellipse cx="122" cy="88" rx="8" ry="10" fill="url(#eyeGrad)"/>
+    <ellipse cx="122" cy="88" rx="4" ry="5" fill="#050508"/>
+    <!-- Eye Highlights -->
+    <circle cx="120" cy="84" r="3" fill="#ffffff"/>
+    <circle cx="125" cy="91" r="1.5" fill="#ffffff" opacity="0.8"/>
+
+    <!-- Eyelash Line -->
+    <path d="M 67,82 Q 78,79 89,83" stroke="#0f172a" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 133,82 Q 122,79 111,83" stroke="#0f172a" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <!-- Nose -->
+    <path d="M 99,96 L 97,102 L 101,102" stroke="#fed7aa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- Mouth -->
+    <path d="M 94,115 Q 100,118 106,115" stroke="#991b1b" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <!-- Cheek Blush -->
+    <ellipse cx="68" cy="99" rx="6" ry="3" fill="#2dd4bf" opacity="0.25"/>
+    <ellipse cx="132" cy="99" rx="6" ry="3" fill="#2dd4bf" opacity="0.25"/>
+
+    <!-- 6. Forehead & Head Accessories (Ninja Band, Cyber Visor, Goggles, Face Mask) -->
+    
+
+    
+
+    
+
+    
+      <!-- Alchemist Goggles on Forehead -->
+      <rect x="68" y="52" width="28" height="18" rx="8" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+      <circle cx="82" cy="61" r="7" fill="#0d9488" stroke="#fef08a" stroke-width="1.5"/>
+      <rect x="104" y="52" width="28" height="18" rx="8" fill="#78350f" stroke="#fbbf24" stroke-width="2"/>
+      <circle cx="118" cy="61" r="7" fill="#0d9488" stroke="#fef08a" stroke-width="1.5"/>
+      <line x1="96" y1="61" x2="104" y2="61" stroke="#fbbf24" stroke-width="2.5"/>
+    
+
+    
+
+    <!-- 7. Front Hair Strands & Bangs -->
+    <path d="M 52,70 C 50,45 70,30 100,30 C 130,30 150,45 148,70 C 138,55 125,50 110,50 C 95,50 80,55 70,72 C 65,60 58,62 52,70 Z" fill="url(#hairGrad)"/>
+    <!-- Dynamic Hair Bangs -->
+    <polygon points="65,58 74,86 82,62" fill="url(#hairGrad)"/>
+    <polygon points="80,56 94,92 102,60" fill="url(#hairGrad)"/>
+    <polygon points="98,58 108,88 118,60" fill="url(#hairGrad)"/>
+    <polygon points="114,60 126,82 134,58" fill="url(#hairGrad)"/>
+    
+    <!-- Top Hair Fluff/Spikes -->
+    <polygon points="90,32 100,18 108,32" fill="url(#hairGrad)"/>
+    <polygon points="75,36 82,24 90,35" fill="url(#hairGrad)"/>
+    <polygon points="110,36 122,25 126,38" fill="url(#hairGrad)"/>
+
+    
+
+    <!-- Hair Sheen / Highlight Arc -->
+    <path d="M 68,48 Q 100,38 132,48" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.55" fill="none"/>
+  </g>
+
+  <!-- Polished Outer Border Ring with Premium Metallic Finish -->
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#2dd4bf" stroke-width="3" stroke-opacity="0.85"/>
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.3"/>
+</svg>
